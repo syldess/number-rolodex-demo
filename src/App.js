@@ -1,5 +1,5 @@
 import React, { useState }from "react";
-import NumberRolodex from "./NumberRolodex";
+import NumberRolodex from "./components/number-rolodex/NumberRolodex";
 
 import "./App.css";
 
