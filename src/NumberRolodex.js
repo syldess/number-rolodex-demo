@@ -2,7 +2,7 @@ import React from "react";
 import DigitFlipper from "./DigitFlipper";
 
 const NumberRolodex = (props) => {
-  const { number, changeNumber, numberOfDigits } = props;
+  const { currentNumber, changeNumber, numberOfDigits } = props;
 
   const increase = (pos, number) => {
     const increasedDigit = Number(number[pos]) + 1;
@@ -27,9 +27,9 @@ const NumberRolodex = (props) => {
     for (let i = 0; i < numberOfDigits; i++) {
       allDigits.push(
         <DigitFlipper
-          digit={number[i]}
-          increase={() => changeNumber(increase(i, number))}
-          decrease={() => changeNumber(decrease(i, number))}
+          digit={currentNumber[i]}
+          increase={() => changeNumber(increase(i, currentNumber))}
+          decrease={() => changeNumber(decrease(i, currentNumber))}
           key={i}
         />
       );
